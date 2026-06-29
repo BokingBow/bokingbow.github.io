@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boking Bow 的个人主页 — 博客与作品集">
+  <title>Boking Bow</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Boking Bow">
+  <meta property="og:description" content="个人主页 — 博客与作品集">
+  <meta property="og:url" content="https://bokingbow.github.io">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo">Boking Bow</a>
+      <ul class="nav-links">
+        <li><a href="#about">关于</a></li>
+        <li><a href="/blog/" target="_blank">博客</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">你好，我是</p>
+        <h1 class="hero-name">Boking Bow</h1>
+        <p class="hero-tagline">写代码，写博客，写生活</p>
+        <p class="hero-desc">
+          一个热爱技术与创作的开发者。在这里分享我的思考、项目与学习笔记。
+        </p>
+        <div class="hero-actions">
+          <a href="/blog/" class="btn btn-primary" target="_blank">
+            <i class="fas fa-pen-fancy"></i> 阅读博客
+          </a>
+          <a href="#about" class="btn btn-outline">
+            <i class="fas fa-user"></i> 了解更多
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-frame">
+          <div class="avatar-placeholder">
+            <i class="fas fa-code"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>向下滚动</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title">关于我</h2>
+      <p class="section-subtitle">了解更多关于我的故事</p>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>开发者</h3>
+          <p>热爱编程与技术探索，持续学习前沿技术，追求优雅的代码与优秀的用户体验。</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i class="fas fa-feather-alt"></i></div>
+          <h3>写作者</h3>
+          <p>通过博客记录技术成长，分享开发经验与学习心得，与社区共同进步。</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>创造者</h3>
+          <p>热衷于将想法变成现实，从个人项目到开源贡献，用代码创造价值。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Preview -->
+  <section class="section blog-preview" id="blog">
+    <div class="container">
+      <h2 class="section-title">最新博客</h2>
+      <p class="section-subtitle">技术分享与个人思考</p>
+      <div class="blog-card">
+        <div class="blog-card-content">
+          <span class="blog-badge"><i class="fas fa-pencil-alt"></i> 最新文章</span>
+          <h3>欢迎来到我的博客</h3>
+          <p>在这里我会分享关于前端开发、系统设计、以及各种技术实践的内容。从 Hexo 搭建到持续部署，每一步都认真记录。</p>
+          <a href="/blog/" class="blog-cta" target="_blank">
+            前往博客 <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="blog-card-visual">
+          <i class="fas fa-newspaper"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Social -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">与我联系</h2>
+      <p class="section-subtitle">在各大平台找到我</p>
+      <div class="social-links">
+        <a href="https://github.com/BokingBow" class="social-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <!-- Add more social links here as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Boking Bow. Built with <i class="fas fa-heart"></i>.</p>
+      <p class="footer-powered">Powered by <a href="https://pages.github.com" target="_blank">GitHub Pages</a> &amp; <a href="https://hexo.io" target="_blank">Hexo</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

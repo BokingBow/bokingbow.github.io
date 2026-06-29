@@ -1,0 +1,77 @@
+# ============================================
+# Deploy to GitHub Pages
+# Builds Hexo blog + root homepage together
+# ============================================
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # Allow manual trigger
+
+# Allow only one concurrent deployment
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+          cache-dependency-path: blog/yarn.lock
+
+      - name: Install Hexo dependencies
+        run: |
+          cd blog
+          yarn install --frozen-lockfile
+
+      - name: Build Hexo blog
+        run: |
+          cd blog
+          npx hexo generate
+
+      - name: Prepare deployment directory
+        run: |
+          # Create staging directory
+          mkdir -p _deploy
+
+          # Copy root homepage files (excluding blog/ and hidden files)
+          cp index.html _deploy/
+          cp -r css _deploy/ 2>/dev/null || true
+          cp -r js _deploy/  2>/dev/null || true
+          cp -r images _deploy/ 2>/dev/null || true
+
+          # Copy Hexo blog output to /blog/ subdirectory
+          cp -r blog/public _deploy/blog
+
+          # Debug: show what we're deploying
+          echo "=== Deployment structure ==="
+          ls -la _deploy/
+          echo ""
+          ls -la _deploy/blog/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _deploy
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

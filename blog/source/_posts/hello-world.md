@@ -1,38 +1,22 @@
 ---
-title: Hello World
+title: 你好，世界
+date: 2025-12-28 12:00:00
+tags: [Hexo, 入门]
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+这是博客的第一篇文章。
 
-### Create a new post
+## 为什么选择 Hexo？
 
-``` bash
-$ hexo new "My New Post"
-```
+Hexo 是一个快速、简洁且高效的静态博客框架。它使用 Markdown 解析文章，可以在几秒内生成静态网页。
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+### 优点
 
-### Run server
+- **速度快** — Node.js 驱动，构建迅速
+- **Markdown 支持** — 专注于写作本身
+- **丰富的主题** — 社区提供大量精美主题
+- **GitHub Pages 友好** — 一键部署
 
-``` bash
-$ hexo server
-```
+## 下一步计划
 
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+我会在这里分享前端开发、系统设计等方面的技术文章。敬请关注！

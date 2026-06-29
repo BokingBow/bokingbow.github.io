@@ -1,6 +1,7 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "bokingbow-blog",
+  "version": "1.0.0",
+  "description": "Boking Bow 的个人博客",
   "private": true,
   "scripts": {
     "build": "hexo generate",
