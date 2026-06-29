@@ -4,7 +4,7 @@
 
 ## 项目结构
 
-```
+```text
 /
 ├── index.html          # 个人主页
 ├── css/style.css       # 主页样式
